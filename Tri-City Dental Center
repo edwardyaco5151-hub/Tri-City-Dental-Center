@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tri-City Dental Center | Modern Family Dentistry</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #005bb7;   /* Tri-City Blue */
+            --secondary: #79bc43; /* Tri-City Green */
+            --light-blue: #00a9e0; /* Tri-City Cyan */
+            --dark: #2d2d2d;
+            --light: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: var(--dark);
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 5%;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo img {
+            height: 70px; /* Adjusted to make your logo clear */
+            width: auto;
+            vertical-align: middle;
+        }
+
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 91, 183, 0.7), rgba(0, 169, 224, 0.7)), 
+                        url('https://images.unsplash.com/photo-1629909608135-ca29a028e9d4?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            max-width: 700px;
+            margin-bottom: 25px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px; /* Rounded look for a modern feel */
+            font-weight: 600;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background: var(--secondary);
+            color: white;
+            box-shadow: 0 4px 15px rgba(121, 188, 67, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: #64a332;
+            transform: scale(1.05);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            padding: 40px;
+            background: white;
+            border-radius: 15px;
+            border-bottom: 5px solid var(--light-blue);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            color: var(--primary);
+        }
+
+        /* Promo Banner */
+        .promo {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 5% 20px;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+    <img src="TriCityLogo.png" alt="Tri-City Dental Center Logo">
+</div>
+        <div class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Location</a>
+            <a href="tel:5551234567" style="color: var(--primary);">(555) 123-4567</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Tri-City Dental Center</h1>
+        <p>Your smile’s home for advanced technology and compassionate care.</p>
+        <a href="tel:5551234567" class="btn btn-primary">Schedule Your Visit</a>
+    </header>
+
+    <section class="promo">
+        <h2>New Patient Special</h2>
+        <p>Comprehensive Exam, Full-Set X-Rays, and Professional Cleaning for only <strong>$99</strong>.</p>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Expert Care for Every Smile</h2>
+        <div class="services-grid">
+            <div class="card">
+                <h3>Family Dentistry</h3>
+                <p>Gentle cleanings and preventative care for patients of all ages.</p>
+            </div>
+            <div class="card">
+                <h3>Advanced Cosmetics</h3>
+                <p>Whitening, veneers, and smile makeovers tailored to your goals.</p>
+            </div>
+            <div class="card">
+                <h3>Restorative Care</h3>
+                <p>Precision dental implants, crowns, and bridges to restore your confidence.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="background: var(--light); padding: 80px 5%; text-align: center;">
+        <h2>Visit Tri-City Dental</h2>
+        <p>123 Practice Lane, Suite 200<br>Your City, State 12345</p>
+        <p><strong>Office Hours:</strong> Mon - Thu: 8am - 5pm | Fri: 8am - 2pm</p>
+        <br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450937!2d144.9537353153167!3d-37.81627977975124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d225b6522bb!2sDental%20Clinic!5e0!3m2!1sen!2sus!4v1625555555555!5m2!1sen!2sus" width="100%" height="300" style="border:0; max-width: 800px; border-radius: 15px;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <footer>
+        <p>© 2026 Tri-City Dental Center. All Rights Reserved.</p>
+        <p><small>HIPAA Compliant Practice | Privacy Policy | Accessibility Statement</small></p>
+    </footer>
+
+</body>
+</html>
