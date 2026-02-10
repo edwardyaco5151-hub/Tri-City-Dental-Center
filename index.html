@@ -27,7 +27,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0.5rem 5%;
+            padding: 1rem 5%; /* Increased padding for the bigger logo */
             background: white;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             position: sticky;
@@ -36,9 +36,14 @@
         }
 
         .logo img {
-            height: 70px; 
+            height: 120px; /* Made the logo much bigger */
             width: auto;
             vertical-align: middle;
+            transition: transform 0.3s ease; /* Smooth hover effect */
+        }
+
+        .logo img:hover {
+            transform: scale(1.05); /* Slight growth on hover */
         }
 
         .nav-links a {
@@ -56,7 +61,7 @@
                         url('https://images.unsplash.com/photo-1629909608135-ca29a028e9d4?auto=format&fit=crop&w=1500&q=80');
             background-size: cover;
             background-position: center;
-            height: 80vh; /* Increased height since promo is gone */
+            height: 80vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -156,6 +161,7 @@
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
             .nav-links { display: none; }
+            .logo img { height: 90px; } /* Slightly smaller for mobile phones */
         }
     </style>
 </head>
@@ -206,7 +212,7 @@
         <p><strong>Office Hours:</strong> Mon - Thu: 8am - 5pm | Fri: 8am - 2pm</p>
         <br>
         <div style="max-width: 800px; margin: 0 auto; background: #ddd; height: 300px; border-radius: 15px; display: flex; align-items: center; justify-content: center;">
-            <p>Google Map will load here</p>
+            <p>Google Map Placeholder</p>
         </div>
     </section>
 
